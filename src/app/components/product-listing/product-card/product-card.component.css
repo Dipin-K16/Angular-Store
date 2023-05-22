@@ -1,0 +1,41 @@
+
+
+.product-card{
+    width: 250px;
+ 
+}
+
+.card:hover{
+
+    border: 1px solid rgba(0, 0, 0, 0.538);
+    box-shadow: 5px 5px 5px 5px #888888;
+
+
+
+}
+
+.card-img-top{
+    width: 175px;
+    margin: auto;
+    padding-top: 10px;
+    object-fit: contain;
+}
+
+.card-title,.card-text{
+    font-size: small;
+    text-align: center;
+}
+
+.card,.card-body{
+    cursor: pointer;
+}
+
+.checked {
+    color: orange;
+  }
+
+  .rate{
+    margin: auto;
+    padding-bottom: 6px ;
+  }
+
