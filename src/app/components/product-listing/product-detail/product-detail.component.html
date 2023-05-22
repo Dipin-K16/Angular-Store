@@ -29,11 +29,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="review-no">41 reviews</span>
+                        <span class="review-no">{{product.rating.count}} reviews</span>
                     </div>
-                    <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
-                    <h4 class="price">current price: <span>$180</span></h4>
-                    <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                    <p class="product-description">{{product.description}}</p>
+                    <h4 class="price">current price: <span>${{product.price}}</span></h4>
+                    <p class="vote"><strong>{{product.rating.rate*100}}</strong> of buyers enjoyed this product! <strong>({{product.rating.rate}} rating)</strong></p>
                     <h5 class="sizes">sizes:
                         <span class="size" data-toggle="tooltip" title="small">s</span>
                         <span class="size" data-toggle="tooltip" title="medium">m</span>
@@ -46,8 +46,8 @@
                         <span class="color blue"></span>
                     </h5>
                     <div class="action">
-                        <button class="add-to-cart btn btn-default" (click)="addToCart(product.id)" type="button">Add to Cart</button>
-                        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                        <button class="add-to-cart btn btn-success" (click)="addToCartLocal(product.id)" type="button">Add to Cart</button>
+                        <button class="like btn btn-success" type="button"><span class="fa fa-heart"></span></button>
                     </div>
                 </div>
             </div>

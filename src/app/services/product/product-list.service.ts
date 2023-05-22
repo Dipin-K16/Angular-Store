@@ -17,5 +17,6 @@ export class ProductListService {
     return this.http.get(`https://fakestoreapi.com/products/${id}`);
   }
 
+  
 
 }

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './components/product-listing/product-detail/product-detail.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
+import { CartComponent } from './components/product-listing/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MainSectionComponent } from './components/main-section/main-section.com
     LeftSideBarComponent,
     ProductCardComponent,
     ProductDetailComponent,
-    MainSectionComponent
+    MainSectionComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
