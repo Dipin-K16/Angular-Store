@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/product-listing/cart/cart.component';
 import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
 
@@ -24,7 +25,7 @@ const routes: Routes = [
         path:'add-product', component: AddProductComponent
       },
       {
-        path:'cart',component:CartComponent
+        path:'cart',component:CartComponent,canActivate:[authGuard]
       },
       {
         path:'new-deal',component:NewDealsComponent
