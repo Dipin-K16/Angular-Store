@@ -1,11 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class LoginService implements OnInit{
 
   constructor(private http: HttpClient) { }
 
@@ -28,21 +28,39 @@ export class LoginService {
 
   // }
 
+  
 
-  userLogin(username: string, password: string): Observable<any>{
-    const url = 'https://fakestoreapi.com/auth/login';
-    const body = {
-      username: 'mor_231',
-      password: '83r5^_'
-    };
-    return this.http.post(url, body).pipe(
-      catchError((error) => {
-        console.log('Error:', error);
-        return throwError(error);
-      })
-    );
+  // userLogin(username: any, password: any): Observable<any>{
+  //   const url = 'https://fakestoreapi.com/auth/login';
+  //   const body = {
+  //     username: username,
+  //     password: password
+  //   };
+  //   return this.http.post(url, body).pipe(
+  //     catchError((error) => {
+  //       console.log('Error:', error);
+  //       return throwError(error);
+  //     })
+  //   );
+  // }
+
+  ngOnInit(): void {
+      
   }
+
+  userLogin(username: string, password: string){
+    const apiUrl = 'https://fakestoreapi.com/auth/login';
+    console.log("loginnn workinggg");
+    return this.http.post(apiUrl, {username:username,password:password})
+    
+  }
+  
 
   
 
+
 }
+
+  
+
+

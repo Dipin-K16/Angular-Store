@@ -15,6 +15,7 @@ export class CartService {
 
   storage = window.localStorage;
 
+
   addToCart(product: any) {
     return this.http.post<any>('https://fakestoreapi.com/carts', {
       userId: 5,

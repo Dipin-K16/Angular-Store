@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -8,19 +9,32 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class LoginComponent {
 
-  constructor(private loginService: LoginService){}
+  constructor(private loginService: LoginService) { }
 
-  username: any;
-  password:any;
-  userToken: any=null;
+  // username: string='';
+  // password: string='';
+  userToken: any = null;
+
+  userName = new FormControl()
+  password = new FormControl()
 
 
-  onLogin(){
-    this.loginService.userLogin(this.username,this.password).subscribe((response: any)=>{
-      console.log("response of login generated token", response);
-      
-    })
+
+  onLogin() {
+    const username = this.userName.value;
+    const password = this.password.value;
+    this.loginService.userLogin(username, password).subscribe((response: any) => {
+      this.userToken = response.token;
+      localStorage.setItem('userToken', this.userToken)
+      console.log(response);
+      alert('Login success')
+    },
+      (error) => {
+        // Show error message
+        alert('Login failed');
+        console.log(error);
+      }
+    )
   }
-
 
 }

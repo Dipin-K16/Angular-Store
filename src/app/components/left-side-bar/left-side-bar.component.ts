@@ -15,11 +15,16 @@ export class LeftSideBarComponent implements OnInit{
  constructor(private cartService: CartService){}
 
  ngOnInit(): void {
-  // getCartSize(){
-  //   const cart: CartItem[] = this.cartService.getCartItemsLocal();
-  //   return cart.length;
-  // }
- }
+
+  this.cartSize=this.getCartSize()
+  console.log("cartSizeee",this.cartSize);
+  
+}
+
+getCartSize(){
+  const cart: CartItem[] = this.cartService.getCartItemsLocal();
+  return cart.length;
+}
 
 
 

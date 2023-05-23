@@ -10,10 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { ProductCardComponent } from './components/product-listing/product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './components/product-listing/product-detail/product-detail.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
 import { CartComponent } from './components/product-listing/cart/cart.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NewDealsComponent } from './new-deals/new-deals.component';
+import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { CartComponent } from './components/product-listing/cart/cart.component'
     ProductCardComponent,
     ProductDetailComponent,
     MainSectionComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent,
+    NewDealsComponent,
+    AddProductComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,7 @@ import { CartComponent } from './components/product-listing/cart/cart.component'
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
 
       ],
   providers: [],

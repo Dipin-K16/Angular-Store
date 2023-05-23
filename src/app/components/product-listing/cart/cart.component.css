@@ -1,8 +1,9 @@
+.row{
+    margin:0;
+}
 
-
-.product-card{
-    width: 250px;
- 
+.card{
+    width:250px!important;
 }
 
 .card:hover{
@@ -26,24 +27,23 @@
     text-align: center;
 }
 
-.card,.card-body{
-    cursor: pointer;
-}
-
-.checked {
-    color: orange;
-  }
-
-  .rate{
+.rate{
     margin: auto;
     padding-bottom: 6px ;
   }
 
-  /* .product-container{
-    padding: 16px;
+  .subtotal h3{
+    margin: 0;
+  }
+  
+  .subtotal{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} */
+    justify-content: center;
+    padding:30px 0px 0px 0px;
+  }
 
+  .subtotal-button{
+    margin-top: 1px!important;
+    display: flex;
+    justify-content: center;
+  }
