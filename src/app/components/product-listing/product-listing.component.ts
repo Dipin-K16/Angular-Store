@@ -6,19 +6,19 @@ import { ProductListService } from 'src/app/services/product/product-list.servic
   templateUrl: './product-listing.component.html',
   styleUrls: ['./product-listing.component.css']
 })
-export class ProductListingComponent implements OnInit{
+export class ProductListingComponent implements OnInit {
 
-  constructor(private productListService: ProductListService){}
-  productList: any[] = [];
+  constructor(private productListService: ProductListService) { }
+  products: any[] = [];
 
-ngOnInit(): void {
+  ngOnInit(): void {
     this.loadAllProducts()
-}
+  }
 
-  loadAllProducts(){
-    this.productListService.getAllProducts().subscribe((result: any)=>{
-      this.productList=result;
-      console.log(this.productList);
+  loadAllProducts() {
+    this.productListService.getAllProducts().subscribe((result: any) => {
+      this.products = result;
+      console.log("prodcuct array",this.products);
     })
   }
 

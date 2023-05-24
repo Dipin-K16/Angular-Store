@@ -10,16 +10,16 @@ import { ProductListService } from 'src/app/services/product/product-list.servic
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  
+
   constructor(private productService: ProductListService, private cartService: CartService, private route: ActivatedRoute, private router: Router) { }
 
   @Input() productDetail: any;
   id: number | undefined;
   product: any;
   quantity = '1';
-  cartProduct: any={
+  cartProduct: any = {
     "productId": 1,
-    "quantity":5
+    "quantity": 5
   }
 
 
@@ -36,42 +36,35 @@ export class ProductDetailComponent implements OnInit {
         // console.log("product detailsssssss", this.product);
       })
     }
-    else {
-      (error: any) => {
-        // console.log("Error retrieving product:", error);
-      }
-    }
   }
 
-  addToCart(id:number){
+
+  addToCart(id: number) {//...................api call
     this.cartProduct.productId = id;
     console.log("oidddddd", this.cartProduct.productId);
-    this.cartService.addToCart(this.cartProduct).subscribe((response)=>{
-      if(response.response){
+    this.cartService.addToCart(this.cartProduct).subscribe((response) => {
+      if (response.response) {
         alert("product added to cart")
         this.cartService.cartAddedSubject.next(true)
       }
       console.log("response", response);
-    }); 
+    });
   }
 
 
 
-  addToCartLocal(id:number){
+  addToCartLocal(id: number) {
     const cartItems: CartItem[] = this.cartService.getCartItemsLocal();
     let itemInCart = cartItems.find(item => item.id === this.product.id);
     if (itemInCart) {
       let qty = parseInt(itemInCart.quantity)
       qty += 1;
       itemInCart.quantity = qty.toString()
-      itemInCart ? this.cartService.addToCartLocal(cartItems) : null;
+      this.cartService.addToCartLocal(cartItems);
     } else {
-      cartItems.push(Object.assign(this.product, { quantity: this.quantity }));
+      cartItems.push({ ...this.product, quantity: this.quantity });
       alert("Product added to cart")
       this.cartService.addToCartLocal(cartItems);
     }
-
   }
-
-
 }

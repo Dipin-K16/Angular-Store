@@ -1,24 +1,13 @@
-.header{
-    height:100px;
-    /* background-color: black; */
+.header {
+    height: 100px;
 }
 
-/* .nav{
-    margin-top: 100px;
-    width: 15%;
-    height: 100%;
-    background-color: cornflowerblue;
-} */
 
-.main-section{
-    /* margin-left: 15%; */
+.main-section {
     display: flex;
-    /* flex-direction: column; */
 }
 
-.body-section{
+.body-section {
     width: 85%;
     height: 100%;
-    /* background-color: aqua; */
 }
-

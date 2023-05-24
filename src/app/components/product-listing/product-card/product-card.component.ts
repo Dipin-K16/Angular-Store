@@ -8,19 +8,9 @@ import { Component, Input } from '@angular/core';
 export class ProductCardComponent {
 
   @Input() product: any;
-  productDetailId: any=null;
-  
-  addToCart(id: number){
+
+  addToCart(id: number) {
     console.log("add to cart");
-    
   }
-
-  showDetail(product: any){
-    this.productDetailId=product.id;
-    console.log("showwwwww",product);
-    
-  }
-
-
 
 }

@@ -12,30 +12,30 @@ import { authGuard } from './auth.guard';
 const routes: Routes = [
 
   {
-    path:'',
-    component:MainSectionComponent, children:[
+    path: '',
+    component: MainSectionComponent, children: [
 
       {
-        path:'',component:ProductListingComponent
+        path: '', component: ProductListingComponent
       },
       {
-        path:'product-detail', component: ProductDetailComponent
+        path: 'product-detail', component: ProductDetailComponent
       },
       {
-        path:'add-product', component: AddProductComponent
+        path: 'add-product', component: AddProductComponent
       },
       {
-        path:'cart',component:CartComponent,
+        path: 'cart', component: CartComponent,
         // canActivate:[authGuard]
       },
       {
-        path:'new-deal',component:NewDealsComponent
+        path: 'new-deal', component: NewDealsComponent
       },
       {
-        path:'login',component:LoginComponent
+        path: 'login', component: LoginComponent
       },
       {
-        path:':id',component:ProductDetailComponent
+        path: 'product-detail/:id', component: ProductDetailComponent
       }
     ]
   }

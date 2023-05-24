@@ -1,5 +1,5 @@
-<div [routerLink]="[productDetailId]" class="product-card">
-  <div (click)="showDetail(product)" class="card w-100 my-2 shadow-2-strong">
+<div [routerLink]="['product-detail/',product.id]" class="product-card">
+  <div class="card w-100 my-2 shadow-2-strong">
     <img
       src="{{ product.image }}"
       class="card-img-top"
@@ -9,7 +9,6 @@
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text price">Rs. {{ product.price }}/-</p>
       <div class="rate">
-        <!-- <i class="fa-solid fa-star-half-stroke m-0" style="color: #f1f50f"></i> -->
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 1"></span>
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 2"></span>
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 3"></span>
@@ -27,8 +26,3 @@
   </div>
 </div>
 
-<!-- <div *ngIf="productDetail">
-
-    <app-product-detail [productDetail]="productDetail"></app-product-detail>
-
-</div> -->

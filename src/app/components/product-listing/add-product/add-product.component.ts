@@ -25,8 +25,7 @@ export class AddProductComponent {
   onProductAdd(){
     const formData = this.productFormGroup.value
     this.addProductService.addProduct(formData).subscribe((response)=>{
-      console.log(response)
+      console.log("product posted success...",response)
     })
   }
-
 }
