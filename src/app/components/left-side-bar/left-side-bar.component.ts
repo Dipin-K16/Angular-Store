@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { authGuard } from 'src/app/auth.guard';
 import { CartItem } from 'src/app/models/cart';
 import { CartService } from 'src/app/services/cart/cart.service';
 

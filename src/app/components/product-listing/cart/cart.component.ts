@@ -40,9 +40,15 @@ export class CartComponent implements OnInit {
   }
 
 
-  removeFromCart() {
-    const hh = localStorage.getItem('cart');
-    console.log(hh);
+  removeFromCart(index:number) {
+    const removeCart = localStorage.getItem('cart');
+    if(removeCart){
+      const cart=JSON.parse(removeCart)
+      cart.splice(index,1)
+      localStorage.setItem('cart', JSON.stringify(cart));
+      this.cartItemsLocal=cart
+    }
+    console.log(removeCart);
   }
 
 

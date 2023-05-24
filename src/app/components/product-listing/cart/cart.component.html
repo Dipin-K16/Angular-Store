@@ -1,13 +1,13 @@
    
   <div *ngIf="cartItemsLocal.length>0; else noData" class="product-container">
-    <div class="subtotal"><h3>Sub total:{{subTotal}}</h3></div>
+    <div class="subtotal"><h3>Sub total: ${{subTotal}}</h3></div>
     <div class="subtotal-button"><a
       type="button"
       class="btn btn-success shadow-0 mt-2"
       >Proceed to buy ( {{cartItemsLocal.length}}  items)</a
       ></div>
     <div class="row">
-      <div *ngFor="let product of cartItemsLocal;" class= "col-lg-3 col-md-6 col-sm-6">
+      <div *ngFor="let product of cartItemsLocal let i = index;" class= "col-lg-3 col-md-6 col-sm-6">
             <div class="card w-100 my-2 shadow-2-strong">
                 <img
                   src="{{ product.image }}"
@@ -26,7 +26,7 @@
                         >Buy now</a
                         >
                         <a
-                        type="button" (click)="removeFromCart()"
+                        type="button" (click)="removeFromCart(i)"
                         class="btn btn-success shadow-0 mt-2"
                         >Remove from cart</a
                         >
