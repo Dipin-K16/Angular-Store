@@ -12,6 +12,9 @@
                 class="form-control"
                 formControlName="productTitle"
               />
+              <div *ngIf="productFormGroup.get('productTitle')?.invalid && productFormGroup.get('name')?.touched">
+                Name is required.
+              </div>
               <div class="form-group">
                 <label for="name"> Price </label>
                 <input
@@ -78,10 +81,10 @@
             <hr />
             <div class="row">
               <div class="col-xs-12 d-flex justify-content-lg-between">
-                <button (click)="onProductAdd()" type="button" class="btn btn-success">
+                <button type="submit" class="btn btn-success">
                   Add Product
                 </button>
-                <button type="submit" class="btn btn-success">Edit</button>
+                <button type="button" class="btn btn-success">Edit</button>
                 <button type="button" class="btn btn-danger">Cancel</button>
               </div>
             </div>

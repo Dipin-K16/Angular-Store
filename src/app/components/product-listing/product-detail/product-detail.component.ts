@@ -60,6 +60,7 @@ export class ProductDetailComponent implements OnInit {
       let qty = parseInt(itemInCart.quantity)
       qty += 1;
       itemInCart.quantity = qty.toString()
+      alert("Product added to cart")
       this.cartService.addToCartLocal(cartItems);
     } else {
       cartItems.push({ ...this.product, quantity: this.quantity });

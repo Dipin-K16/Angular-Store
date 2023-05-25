@@ -1,0 +1,13 @@
+footer{
+    background-color:rgba(225, 225, 221, 0.593);
+    font-family: 'Times New Roman', Times, serif
+}
+
+.row{
+    width: 100%;
+}
+
+footer h3{
+    font-size: x-large;
+    font-weight: bolder;
+}

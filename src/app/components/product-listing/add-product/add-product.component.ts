@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddProductService } from 'src/app/services/product/add-product.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AddProductComponent {
 
   productFormGroup = new FormGroup({
 
-    productTitle: new FormControl(),
+    productTitle: new FormControl('',Validators.required),
     productPrice: new FormControl(),
     imagePath: new FormControl(),
     description: new FormControl(),

@@ -4,7 +4,8 @@
 }
 
 header{
-    /* display: flex; */
+    background-color:rgba(225, 225, 221, 0.593);
+    font-family: 'Times New Roman', Times, serif    
 }
 
 .login-btn{
