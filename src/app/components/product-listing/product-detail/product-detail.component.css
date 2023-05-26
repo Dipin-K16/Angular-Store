@@ -10,12 +10,9 @@ img {
 
 .prod-detail{
     margin-top: 30px;
+    padding: 25px;
+    /* border: 2px solid black; */
 }
-
-.tab-content {
-    overflow: hidden;
-}
-
 
 .card {
     margin-top: 50px;
@@ -80,14 +77,12 @@ img {
     text-transform: UPPERCASE;
     font-weight: bold;
     color: #fff;
-    -webkit-transition: background .3s ease;
-    transition: background .3s ease;
 }
 
 .add-to-cart:hover,
-.like:hover {
+.like,:hover {
     /* background: #b36800; */
-    color: #fff;
+    color: #ffffff;
 }
 
 

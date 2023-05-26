@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -15,14 +15,21 @@ export class LoginComponent {
   // password: string='';
   userToken: any = null;
 
-  userName = new FormControl()
-  password = new FormControl()
+  loginForm= new FormGroup({  
+    userName:new FormControl('',Validators.required),
+    password:new FormControl('',Validators.required)
+  })
+    
+  get userName(){return this.loginForm.get('userName')}
+  get password(){return this.loginForm.get('password')}
 
 
 
   onLogin() {
-    const username = this.userName.value;
-    const password = this.password.value;
+
+    const formData = this.loginForm.value
+    const username = formData.userName
+    const password = formData.password
     this.loginService.userLogin(username, password).subscribe((response: any) => {
       this.userToken = response.token;
       localStorage.setItem('userToken', this.userToken)
@@ -30,7 +37,7 @@ export class LoginComponent {
       alert('Login success')
     },
       (error) => {
-        alert('Login failed');
+        // alert('Login failed');
         console.log(error);
       }
     )

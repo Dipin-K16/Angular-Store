@@ -1,17 +1,18 @@
 <div class="login-form">
   <div class="login">
-    <form class="px-4 py-3 ">
+    <form class="px-4 py-3 " [formGroup]="loginForm">
       <div class="mb-3">
         <label for="exampleDropdownFormEmail1" class="form-label"
           >Email address</label
         >
         <input
-          type="email"
+          type="text"
           class="form-control"
           id="exampleDropdownFormEmail1"
-          [formControl]="userName"
+          formControlName="userName"
           placeholder="email@example.com"
         />
+        <span *ngIf="userName?.invalid && userName?.touched" >Username is required</span>
       </div>
       <div class="mb-3">
         <label for="exampleDropdownFormPassword1" class="form-label"
@@ -21,9 +22,10 @@
           type="password"
           class="form-control"
           id="exampleDropdownFormPassword1"
-          [formControl]="password"
+          formControlName="password"
           placeholder="Password"
         />
+        <span *ngIf="password?.invalid" >Password is required</span>
       </div>
       <div class="mb-3">
         <div class="form-check">

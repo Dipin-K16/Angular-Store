@@ -48,7 +48,7 @@ export class LoginService implements OnInit{
       
   }
 
-  userLogin(username: string, password: string){
+  userLogin(username: any, password: any){
     const apiUrl = 'https://fakestoreapi.com/auth/login';
     console.log("loginnn workinggg");
     return this.http.post(apiUrl, {username:username,password:password})
