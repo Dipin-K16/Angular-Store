@@ -17,6 +17,7 @@ import { CartComponent } from './components/product-listing/cart/cart.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
+import { BillComponent } from './components/product-listing/cart/bill/bill.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AddProductComponent } from './components/product-listing/add-product/ad
     FooterComponent,
     NewDealsComponent,
     AddProductComponent,
+    BillComponent,
 
   ],
   imports: [

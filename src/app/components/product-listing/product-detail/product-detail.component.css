@@ -3,6 +3,9 @@ body {
     font-family: 'open sans';
     overflow-x: hidden;
 }
+.container{
+    height: 100vh;
+}
 
 img {
     max-width: 100%;
@@ -11,7 +14,6 @@ img {
 .prod-detail{
     margin-top: 30px;
     padding: 25px;
-    /* border: 2px solid black; */
 }
 
 .card {
@@ -56,18 +58,6 @@ img {
     margin-left: 40px;
 }
 
-.color {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    height: 2em;
-    width: 2em;
-    border-radius: 2px;
-}
-
-.color:first-of-type {
-    margin-left: 20px;
-}
 
 .add-to-cart,
 .like {
@@ -79,15 +69,18 @@ img {
     color: #fff;
 }
 
-.add-to-cart:hover,
-.like,:hover {
-    /* background: #b36800; */
-    color: #ffffff;
-}
+
 
 
 .prod-img {
     width: 260px;
     margin: auto;
     object-fit: contain;
+    transition: width 0.4s ease;
+    border-bottom: 1px solid black;
+    border-sh
+}
+
+.prod-img:hover{
+    width: 300px;
 }

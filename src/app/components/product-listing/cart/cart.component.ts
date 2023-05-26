@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   cartItemsLocal: CartItem[] = [];//model for local
   cartItems: any[] = []
   subTotal: number = 0;
+  productBill:any
 
   constructor(private cartService: CartService) {
     this.cartService.cartAddedSubject.subscribe(response => {
