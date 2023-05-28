@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
 import { BillComponent } from './components/product-listing/cart/bill/bill.component';
+import { WishlistComponent } from './components/product-listing/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BillComponent } from './components/product-listing/cart/bill/bill.compo
     NewDealsComponent,
     AddProductComponent,
     BillComponent,
+    WishlistComponent,
 
   ],
   imports: [

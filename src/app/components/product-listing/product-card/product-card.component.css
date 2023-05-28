@@ -6,11 +6,8 @@
 }
 
 .card:hover{
-
-    border: 1px solid rgba(0, 0, 0, 0.538);
+    /* border: 1px solid rgba(0, 0, 0, 0.538); */
     box-shadow: 5px 5px 5px 5px #888888;
-
-
 }
 
 .card-img-top{
@@ -49,3 +46,10 @@
     font-weight: bold;
     color: red;
 }
+
+/* .wishlist-heart{
+    position: relative;
+    left:200px;
+    top:20px;
+} */
+

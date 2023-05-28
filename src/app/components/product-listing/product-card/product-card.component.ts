@@ -13,4 +13,9 @@ export class ProductCardComponent {
     console.log("add to cart");
   }
 
+  handleWishlist(event:Event){
+    event.stopPropagation();
+    console.log("handle wishlist");
+  }
+
 }

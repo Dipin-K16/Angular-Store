@@ -8,6 +8,7 @@ import { CartComponent } from './components/product-listing/cart/cart.component'
 import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
 import { authGuard } from './auth.guard';
+import { WishlistComponent } from './components/product-listing/wishlist/wishlist.component';
 
 const routes: Routes = [
 
@@ -29,6 +30,10 @@ const routes: Routes = [
         // canActivate:[authGuard]
       },
       {
+        path: 'wishlist', component: WishlistComponent,
+        // canActivate:[authGuard]
+      },
+      {
         path: 'new-deal', component: NewDealsComponent
       },
       {
@@ -36,6 +41,9 @@ const routes: Routes = [
       },
       {
         path: 'product-detail/:id', component: ProductDetailComponent
+      },
+      {
+        path: 'wishlist/product-detail/:id', component: ProductDetailComponent
       }
     ]
   }

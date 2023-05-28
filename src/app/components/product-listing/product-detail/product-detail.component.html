@@ -30,7 +30,7 @@
           <button class="add-to-cart btn btn-success" (click)="addToCartLocal(product.id)" type="button">
             Add to Cart
           </button>
-          <button class="like btn btn-success" type="button">
+          <button (click)="handleWishlist(product.id)" class="like btn btn-success" type="button">
             <span class="fa fa-heart heart"></span>
           </button>
         </div>

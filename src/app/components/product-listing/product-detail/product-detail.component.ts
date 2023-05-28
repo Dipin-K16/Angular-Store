@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CartItem } from 'src/app/models/cart';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ProductListService } from 'src/app/services/product/product-list.service';
+import { WishlistService } from 'src/app/services/wishlist/wishlist.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,7 +12,12 @@ import { ProductListService } from 'src/app/services/product/product-list.servic
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor(private productService: ProductListService, private cartService: CartService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private productService: ProductListService,
+     private cartService: CartService,
+     private wishListService: WishlistService,
+      private route: ActivatedRoute, 
+      private router: Router) { }
 
   @Input() productDetail: any;
   id: number | undefined;
@@ -68,4 +74,12 @@ export class ProductDetailComponent implements OnInit {
       this.cartService.addToCartLocal(cartItems);
     }
   }
+  
+  handleWishlist(id: number){
+    const wishListItem: CartItem[] = this.wishListService.getWishListItemLocal();
+     wishListItem.push(this.product)
+     alert("Product added to wishlist")
+     this.wishListService.addWishlistToLocal(wishListItem)
+  }
+
 }

@@ -1,9 +1,12 @@
 <div [routerLink]="['product-detail/',product.id]" class="product-card">
   <div class="card w-100 my-2 shadow-2-strong">
+    <!-- <div (click)="handleWishlist($event)" class="wishlist-heart">
+      <i class="fa fa-heart me-3"></i>
+    </div> -->
     <img
-      src="{{ product.image }}"
-      class="card-img-top"
-      style="aspect-ratio: 1 / 1"
+    src="{{ product.image }}"
+    class="card-img-top"
+    style="aspect-ratio: 1 / 1"
     />
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">{{ product.title }}</h5>
