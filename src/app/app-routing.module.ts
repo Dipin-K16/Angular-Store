@@ -9,6 +9,8 @@ import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
 import { authGuard } from './auth.guard';
 import { WishlistComponent } from './components/product-listing/wishlist/wishlist.component';
+import { PaymentComponent } from './components/product-listing/cart/payment/payment.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 const routes: Routes = [
 
@@ -27,6 +29,14 @@ const routes: Routes = [
       },
       {
         path: 'cart', component: CartComponent,
+        // canActivate:[authGuard]
+      },
+      {
+        path: 'orders', component: OrdersComponent,
+        // canActivate:[authGuard]
+      },
+      {
+        path:'cart/payment', component: PaymentComponent,
         // canActivate:[authGuard]
       },
       {

@@ -12,7 +12,7 @@
           formControlName="userName"
           placeholder="email@example.com"
         />
-        <span *ngIf="userName?.invalid && userName?.touched" >Username is required</span>
+        <span *ngIf="userName?.invalid && userName?.touched" style="color: red;" >Username is required</span>
       </div>
       <div class="mb-3">
         <label for="exampleDropdownFormPassword1" class="form-label"
@@ -25,7 +25,7 @@
           formControlName="password"
           placeholder="Password"
         />
-        <span *ngIf="password?.invalid" >Password is required</span>
+        <span *ngIf="password?.invalid && password?.touched" style="color: red;" >Password is required</span>
       </div>
       <div class="mb-3">
         <div class="form-check">

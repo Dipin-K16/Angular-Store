@@ -19,6 +19,8 @@ import { NewDealsComponent } from './new-deals/new-deals.component';
 import { AddProductComponent } from './components/product-listing/add-product/add-product.component';
 import { BillComponent } from './components/product-listing/cart/bill/bill.component';
 import { WishlistComponent } from './components/product-listing/wishlist/wishlist.component';
+import { PaymentComponent } from './components/product-listing/cart/payment/payment.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { WishlistComponent } from './components/product-listing/wishlist/wishlis
     AddProductComponent,
     BillComponent,
     WishlistComponent,
+    PaymentComponent,
+    OrdersComponent,
 
   ],
   imports: [

@@ -1,3 +1,7 @@
 <div>
-    <img class="deals-img" src="\assets\Screenshot (12).png" />
+    <!-- <img class="deals-img" src="\assets\Screenshot (12).png" /> -->
 </div>
+
+<ul *ngFor="let el of arr; let i=index" >
+    <li><input type="checkbox" (change)="handleCheckBox($event,i)" />{{el}}  <button *ngIf="isChecked[i]" (click)="handleDelete(i)">delete</button></li>
+</ul>

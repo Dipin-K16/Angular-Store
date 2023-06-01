@@ -1,0 +1,12 @@
+<div class="container py-5 px-5">
+    <div class=" prod-det row" *ngFor="let product of orders">
+    <div class=" d-flex py-2">
+        <div class="prod-img px-2">
+          <img src={{product.image}} style="width: 50px; height: 50px;"/>  
+        </div>
+        <div class="prod-title px-2">
+            {{ product.title }}
+        </div>
+    </div>
+    </div>
+</div>

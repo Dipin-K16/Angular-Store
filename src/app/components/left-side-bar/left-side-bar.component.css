@@ -11,8 +11,11 @@
         color: #086439;
     }
 
-    @media (max-width: 500px) {
+    @media screen and (max-width: 500px) {
         .sidebar {
-            display: none;
+            width: 80px;
+            font-size: smaller;
+            padding: 0px;
+
         }
     }

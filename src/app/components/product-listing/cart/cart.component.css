@@ -6,7 +6,7 @@
 }
 
 .card:hover{
-    border: 1px solid rgba(0, 0, 0, 0.538);
+    border: 1px solid #00000089;
     box-shadow: 5px 5px 5px 5px #888888;
 }
 
@@ -95,4 +95,19 @@
     color: black;
     font-size: larger;
     font-weight: bolder;
+  }
+
+  @media screen and (max-width:500px) {
+    
+    .product-container{
+  display: flex;
+  flex-direction: column;
+}
+.bill{
+      display: flex;
+
+    }
+    .cart-box{
+      display: flex;
+    }
   }
