@@ -5,3 +5,11 @@
 <ul *ngFor="let el of arr; let i=index" >
     <li><input type="checkbox" (change)="handleCheckBox($event,i)" />{{el}}  <button *ngIf="isChecked[i]" (click)="handleDelete(i)">delete</button></li>
 </ul>
+
+
+<div class="box" id="booo">
+    <div class="box1" (click)="handleClick()"></div>
+    <div class="box2" (click)="handleClick()"></div>
+    <div class="box3" (click)="handleClick()"></div>
+    <div class="box4" (click)="handleClick()"></div>
+</div>

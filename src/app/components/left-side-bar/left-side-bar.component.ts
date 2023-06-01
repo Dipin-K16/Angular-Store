@@ -18,7 +18,6 @@ export class LeftSideBarComponent implements OnInit{
  ngOnInit(): void {
 
   this.cartSize=this.getCartSize()
-  console.log("cartSizeee",this.cartSize);
   
 }
 

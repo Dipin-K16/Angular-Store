@@ -33,9 +33,9 @@ export class CartComponent implements OnInit {
       this.subTotal = 0
       this.cartItemsLocal.forEach(element => {
         this.subTotal = this.subTotal + element.price
-        console.log("cart price.........", this.subTotal);
+        // console.log("cart price.........", this.subTotal);
       });
-      console.log("cart item............", this.cartItems);
+      // console.log("cart item............", this.cartItems);
     })
   }
 
@@ -48,7 +48,7 @@ export class CartComponent implements OnInit {
       localStorage.setItem('cart', JSON.stringify(cart));
       this.cartItemsLocal = cart
     }
-    console.log(removeCart);
+    // console.log(removeCart);
   }
 
 
