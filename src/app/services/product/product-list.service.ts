@@ -9,14 +9,19 @@ export class ProductListService {
   constructor(private http: HttpClient) { }
 
 
-  getAllProducts(){
+  getAllProducts() {
     return this.http.get('https://fakestoreapi.com/products');
   }
 
-  getProductById(id:number){
+  getProductById(id: number) {
     return this.http.get(`https://fakestoreapi.com/products/${id}`);
   }
 
-  
+
+  getNewDealsProducts(){
+    return fetch('https://dummyjson.com/products')
+      .then(res => res.json())
+  }
+
 
 }

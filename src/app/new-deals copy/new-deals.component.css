@@ -1,0 +1,32 @@
+.deals-img{
+    width: 100%;
+}
+
+.box{
+    width:410px;
+    height: 410px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.box3{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.box4{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}

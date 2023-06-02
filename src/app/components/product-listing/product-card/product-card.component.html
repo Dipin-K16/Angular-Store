@@ -4,7 +4,7 @@
       <i class="fa fa-heart me-3"></i>
     </div> -->
     <img
-    src="{{ product.image }}"
+    src="{{ product.image || product.images[0]}}"
     class="card-img-top"
     style="aspect-ratio: 1 / 1"
     />
@@ -17,9 +17,9 @@
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 3"></span>
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 4"></span>
         <span class="fa fa-star" [class.checked]="product.rating.rate >= 5"></span>
-        <span class="text-muted">({{product.rating.rate}})</span>
+        <span class="text-muted">({{product.rating.rate || product.rating}})</span>
       </div>
-      <a
+      <a *ngIf="!product.images"
         type="button"
         class="btn btn-success shadow-0 me-1"
         (click)="addToCart(product)"

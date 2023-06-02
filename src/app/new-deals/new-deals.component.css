@@ -1,32 +1,37 @@
-.deals-img{
-    width: 100%;
+.newDeal-container{
+    padding: 16px;
 }
 
-.box{
-    width:410px;
-    height: 410px;
-    border: 1px solid red;
+.row{
+    margin: 0;
+    
+}
+
+.popup{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.334);
 }
-.box1{
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
+
+.popup-container{
+    background-color: #fff;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    overflow-y: scroll;
+    border-radius: 15px;
 }
-.box2{
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-}
-.box3{
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-}
-.box4{
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
+
+.popup-content{
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

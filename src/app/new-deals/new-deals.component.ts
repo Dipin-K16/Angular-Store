@@ -1,40 +1,40 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ProductListService } from '../services/product/product-list.service';
 
 @Component({
   selector: 'app-new-deals',
   templateUrl: './new-deals.component.html',
   styleUrls: ['./new-deals.component.css']
 })
-export class NewDealsComponent {
+export class NewDealsComponent implements OnInit {
 
-  arr = ['cat', 'lion', 'tiger', 'girraff']
-  show: boolean = false
-  isChecked: boolean[] = [];
+  constructor(private productService: ProductListService) { }
+
+  newProducts: any[] = [];
+  check: boolean = false;
+  productDetail: any;
 
 
-  handleDelete(index: number) {
-    // this.arr.splice(index,1)
-    this.arr = this.arr.filter((el, i) => {
-      return i !== index;
+  ngOnInit(): void {
+    this.getProducts()
+  }
+
+  getProducts() {
+    this.productService.getNewDealsProducts().then(data => {
+      this.newProducts = data.products
     })
   }
 
-  handleCheckBox(event: any, index: number) {
-    this.isChecked[index] = event.target.checked;
-  }
-
-  check: boolean = false;
-  handleClick() {
+  handleDetail(product: any){
     this.check = !this.check;
-    console.log(this.check);
-    const bg = document.getElementById('booo')
-    if (this.check) {
-      bg!.style.backgroundColor = 'green'
-    }
-    else {
-      bg!.style.backgroundColor = 'white'
-    }
+    this.productDetail = product;
   }
 
 
+  handleClose(){
+    this.check = false;
+  }
 }
+
+

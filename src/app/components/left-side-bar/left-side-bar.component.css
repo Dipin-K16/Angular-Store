@@ -7,8 +7,15 @@
     }
 
     a:hover {
-        /* background-color: #; */
-        color: #086439;
+        background-color:#086439;
+        color: #ffffff;
+    }
+
+    .active-link{
+        background: rgb(0,107,57);
+        background: linear-gradient(279deg, rgba(0,107,57,1) 4%, rgba(6,54,32,1) 90%);
+       
+        color: #ffffff;
     }
 
     @media screen and (max-width: 500px) {
